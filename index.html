@@ -1,57 +1,120 @@
-
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Patentas Games</title>
+  <meta name="theme-color" content="#080a12">
+  <meta name="description" content="Patentas Games is an independent game studio creating original games. Play FLUX: OVERDRIVE directly in your browser.">
+  <title>Patentas Games | Independent Game Studio</title>
   <style>
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #080a12;
-      color: white;
+      color: #fff;
     }
+    a { -webkit-tap-highlight-color: transparent; }
     header {
-      padding: 24px 8%;
+      padding: 22px 8%;
       background: #101323;
       border-bottom: 1px solid #292d43;
       font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    header span { color: #a78bfa; }
+    .hero {
+      padding: 100px 8% 90px;
+      background:
+        radial-gradient(ellipse at 82% 15%, #49258a 0%, transparent 48%),
+        radial-gradient(ellipse at 15% 100%, #17265a 0%, transparent 45%),
+        #0c0f1b;
+    }
+    .tag {
+      color: #c4b5fd;
+      letter-spacing: 4px;
+      font-size: 12px;
       font-weight: bold;
     }
-    header span { color: #9b72ff; }
-    .hero {
-      padding: 100px 8%;
-      background: radial-gradient(ellipse at 80% 20%, #39216d, transparent 55%), #0c0f1b;
+    h1 {
+      font-size: clamp(42px, 8vw, 78px);
+      line-height: 1.02;
+      margin: 22px 0;
+      letter-spacing: -2px;
     }
-    .tag { color: #bda7ff; letter-spacing: 4px; font-size: 12px; }
-    h1 { font-size: clamp(42px, 8vw, 76px); margin: 20px 0; }
     p { color: #b3bad0; line-height: 1.7; }
+    .hero p { max-width: 560px; font-size: 17px; }
     .button {
       display: inline-block;
-      padding: 14px 22px;
+      padding: 15px 23px;
       margin-top: 15px;
       background: #8b5cf6;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      border: 1px solid #a78bfa;
+      border-radius: 9px;
+      font-weight: bold;
+      transition: transform .2s, background .2s;
+    }
+    .button:hover {
+      background: #7c3aed;
+      transform: translateY(-2px);
+    }
+    main { padding: 55px 8%; }
+    .section-tag {
+      color: #a78bfa;
+      font-size: 12px;
+      letter-spacing: 3px;
       font-weight: bold;
     }
-    main { padding: 50px 8%; }
     .game {
-      margin-top: 25px;
-      padding: 30px;
-      max-width: 750px;
-      background: #121627;
-      border: 1px solid #30354c;
-      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+      margin-top: 24px;
+      padding: clamp(25px, 5vw, 45px);
+      max-width: 850px;
+      background:
+        radial-gradient(ellipse at 90% 10%, #38206a 0%, transparent 48%),
+        linear-gradient(135deg, #151a30, #101321);
+      border: 1px solid #373052;
+      border-radius: 18px;
     }
-    .label { color: #bda7ff; font-size: 12px; }
+    .game-label {
+      display: inline-block;
+      color: #c4b5fd;
+      background: #302052;
+      border: 1px solid #62449a;
+      padding: 7px 11px;
+      border-radius: 6px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+    .game h2 {
+      font-size: clamp(32px, 6vw, 54px);
+      margin: 23px 0 12px;
+      letter-spacing: -1px;
+    }
+    .game p { max-width: 530px; }
+    .game .button { margin-top: 20px; }
+    .about {
+      margin-top: 65px;
+      padding-bottom: 20px;
+    }
     footer {
       padding: 25px 8%;
       border-top: 1px solid #292d43;
       color: #858da6;
+      font-size: 13px;
+    }
+    @media (max-width: 600px) {
+      header { padding: 20px 6%; }
+      .hero { padding: 75px 6%; }
+      main { padding: 40px 6%; }
+      footer { padding: 22px 6%; }
+      .tag { letter-spacing: 2px; }
     }
   </style>
 </head>
@@ -61,27 +124,30 @@
   <section class="hero">
     <div class="tag">INDEPENDENT GAME STUDIO</div>
     <h1>PLAY SOMETHING<br>DIFFERENT.</h1>
-    <p>Original games. Big ideas. Made by an independent developer.</p>
+    <p>Original games. Big ideas. Created by an independent developer.</p>
     <a class="button" href="#games">EXPLORE GAMES ↓</a>
   </section>
 
   <main id="games">
+    <div class="section-tag">NOW AVAILABLE</div>
     <h2>Featured Game</h2>
-    <div class="game">
-      <div class="label">COMING SOON</div>
-      <h2>FLUX: OVERDRIVE</h2>
-      <p>A new gaming experience by Patentas Games.</p>
-      <p>The browser version is being prepared. Stay tuned!</p>
-    </div>
 
-    <section style="margin-top:60px">
-      <h2>About Us</h2>
-      <p>Patentas Games is an independent game studio.</p>
+    <article class="game">
+      <div class="game-label">▶ PLAY IN YOUR BROWSER</div>
+      <h2>FLUX: OVERDRIVE</h2>
+      <p>A fast-paced arcade challenge where every move matters. Jump in, flip sides, and chase your high score.</p>
+      <a class="button" href="/flux/">PLAY NOW ↗</a>
+      <p style="font-size:13px;margin-top:18px">Free to play · Browser game · Desktop and mobile</p>
+    </article>
+
+    <section class="about">
+      <div class="section-tag">THE STUDIO</div>
+      <h2>About Patentas Games</h2>
+      <p>Patentas Games is an independent game studio focused on creating original gaming experiences.</p>
       <p>Created by Giannis Patentalakis.</p>
     </section>
   </main>
 
-  <footer>© 2026 Patentas Games</footer>
+  <footer>© 2026 Patentas Games · Made independently.</footer>
 </body>
 </html>
-
